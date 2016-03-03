@@ -12,8 +12,4 @@ Component.propTypes = {
   name: React.PropTypes.string
 };
 
-Component.defaultProps = {
-  name: 'stranger?'
-};
-
 export default Component;
