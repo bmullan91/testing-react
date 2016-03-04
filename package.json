@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "config": {
+    "browserify_opts": "-t [ babelify --presets [ es2015 react ] ] ./src/index.js -o ./dist/bundle.js"
+  },
   "scripts": {
     "clean": "rm -rf ./dist && mkdir dist",
-    "build": "npm run clean && browserify -t [ babelify --presets [ es2015 react ] ] ./src/index.js > ./dist/bundle.js",
-    "watch": "npm run clean && watchify --poll -v -t [ babelify --presets [ es2015 react ] ] ./src/index.js -o ./lib/bundle.js",
+    "build": "npm run clean && browserify $npm_package_config_browserify_opts",
+    "watch": "npm run clean && watchify --poll -v $npm_package_config_browserify_opts",
     "test": "babel-node test/test.* | tap-spec",
     "coverage": "babel-node ./node_modules/.bin/babel-istanbul cover test/test.*",
     "start": "npm run build && open index.html"
