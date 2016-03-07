@@ -24,6 +24,7 @@ Most of these should be easily replaced, if you prefer other libraries.
 - [x] tape-run: the browser runner
 - [x] tape-spec: prettify tap output
 - [x] babel-istanbul: for code coverage (coverify doesn't quite work atm)
+- [x] eslint
 
 
 ### test strategy
@@ -86,5 +87,4 @@ Can be any of the following (if installed...)
 
 ### todo
 
-- Add eslint
-- Add more tests and in-depth examples
+- Add lots more tests and in-depth examples
