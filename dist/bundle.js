@@ -18836,8 +18836,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var DEFAULT_NAME = 'stranger?';
-
 var App = function (_React$Component) {
   _inherits(App, _React$Component);
 
@@ -18848,7 +18846,7 @@ var App = function (_React$Component) {
 
     _this.updateName = _this.updateName.bind(_this);
     _this.state = {
-      name: ''
+      name: undefined
     };
     return _this;
   }
@@ -18856,9 +18854,8 @@ var App = function (_React$Component) {
   _createClass(App, [{
     key: 'updateName',
     value: function updateName(event) {
-      var name = event.target.value;
       this.setState({
-        name: name
+        name: event.target.value || undefined
       });
     }
   }, {
@@ -18868,7 +18865,7 @@ var App = function (_React$Component) {
         'div',
         null,
         _react2.default.createElement('input', { value: this.state.name, onChange: this.updateName, autofocus: true, placeholder: 'who dis?' }),
-        _react2.default.createElement(_Component2.default, { name: this.state.name || DEFAULT_NAME })
+        _react2.default.createElement(_Component2.default, { name: this.state.name })
       );
     }
   }]);
@@ -18908,6 +18905,10 @@ function Component(_ref) {
 
 Component.propTypes = {
   name: _react2.default.PropTypes.string
+};
+
+Component.defaultProps = {
+  name: 'Stranger?'
 };
 
 exports.default = Component;
