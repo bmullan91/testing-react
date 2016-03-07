@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Component({name}) {
+function Component({ name }) {
   return (
     <div>
       <span>hello {name}</span>
@@ -14,6 +14,6 @@ Component.propTypes = {
 
 Component.defaultProps = {
   name: 'Stranger?'
-}
+};
 
 export default Component;

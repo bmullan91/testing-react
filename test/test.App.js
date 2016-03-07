@@ -18,4 +18,4 @@ test('renders the Component as a child', ({ plan, deepEqual }) => {
   deepEqual(actual, expected, 'should render a component as its second child');
 });
 
-//TODO further tests
+// TODO further tests

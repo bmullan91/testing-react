@@ -27,8 +27,7 @@ test('Component has the correct default props', ({ plan, deepEqual }) => {
 test('recongises the name prop and renders the correct children', ({ plan, deepEqual }) => {
   plan(1);
 
-  debugger;
-  const name = 'Brian'
+  const name = 'Brian';
   const expected = <span>hello {name}</span>;
 
   const shallowRenderer = ReactTestUtils.createRenderer();

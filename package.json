@@ -9,7 +9,8 @@
   "scripts": {
     "start": "npm run build && open index.html",
     "watch": "npm run clean:dist && watchify --poll -v $npm_package_config_br_transforms ./src/index.js -o ./dist/bundle.js",
-    "test": "npm run build:test && node ${TEST_NODE_ARGS:-} ./test/bundle.js | tap-spec",
+    "lint": "eslint src/ test/ --ignore-path .gitignore",
+    "test": "npm run lint && npm run build:test && node ${TEST_NODE_ARGS:-} ./test/bundle.js | tap-spec",
     "test:debug": "TEST_NODE_ARGS=--debug-brk npm run test",
     "test:browser": "npm run build:test && cat ./test/bundle.js | tape-run --browser=${TEST_BROWSER} | tap-spec",
     "test:coverage": "babel-node ./node_modules/.bin/babel-istanbul cover test/index.js",
@@ -39,6 +40,9 @@
   },
   "devDependencies": {
     "babel-istanbul": "^0.6.1",
+    "eslint": "^2.3.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "eslint-plugin-react": "^4.2.0",
     "lodash.omit": "^4.1.0",
     "react-addons-test-utils": "^0.14.7",
     "tap-spec": "^4.1.1",
@@ -51,5 +55,11 @@
       "es2015",
       "react"
     ]
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "rules": {
+      "comma-dangle": [2, "never"]
+    }
   }
 }
