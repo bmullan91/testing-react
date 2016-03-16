@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/bmullan91/testing-react.svg?branch=master)](https://travis-ci.org/bmullan91/testing-react)
+
 # Testing React
 
 ## Overview
