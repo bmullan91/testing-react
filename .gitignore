@@ -1,3 +1,4 @@
+dist
 coverage
 test/bundle.js
 node_modules
