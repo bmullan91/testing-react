@@ -19,7 +19,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <input value={this.state.name}
+        <input
+          value={this.state.name}
           onChange={this.updateName}
           autoFocus
           placeholder="who dis?"
