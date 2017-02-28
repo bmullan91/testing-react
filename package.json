@@ -39,7 +39,7 @@
     "react-dom": "^15.1.0"
   },
   "devDependencies": {
-    "babel-istanbul": "^0.6.1",
+    "babel-istanbul": "^0.12.2",
     "eslint": "^2.10.2",
     "eslint-config-airbnb": "^6.1.0",
     "lodash.omit": "^4.1.0",
