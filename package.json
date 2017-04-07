@@ -36,7 +36,7 @@
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
     "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "react-dom": "^15.5.0"
   },
   "devDependencies": {
     "babel-istanbul": "^0.6.1",
